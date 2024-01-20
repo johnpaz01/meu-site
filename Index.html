@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namora Comigo?</title>
+</head>
+<body>
+    <div id = "conteudo">
+        <h1>Aceita Orar pra namora Comigo?</h1>
+        <button class = "btn" onclick="sim()">SIM</button>
+        <button class = "btn" onclick="desvia(this)" onmouseover="desvia(this)">NÃO</button>
+        <h4 style="position: absolute; bottom: 10px; right: 25px; color: white; font-size: 80%;">by: John Paz</h4>
+
+    </div>
+
+
+</body>
+
+<style>
+#conteudo{
+    background: #e33a58;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px; 
+    text-align: center;
+    font-family: Cambria;
+}
+
+.btn{
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 80px;
+    border-radius: 12px;
+}
+</style>
+
+<script>
+function sim(){
+alert("Você aceitou? que lindo :) haha");
+}
+
+function desvia(t){
+var btn = t;
+btn.style.position = 'absolute';
+btn.style.bottom = geraposicao(10, 90);
+btn.style.left =  geraposicao(10, 85);
+console.log("opa, desviei...");
+}
+
+function geraposicao(min, max){
+return (Math.random() * (max - min) + min) +"%";
+}
+
+</script>
+
+</html>
